@@ -48,10 +48,10 @@ export default {
   methods: {
     async openNewTab(e, linkUrl) {
       await e.preventDefault()
-      return await window.open(linkUrl)
+      return await window.open(linkUrl, '_blank')
     },
-    async openLink(linkUrl) {
-      return await window.open(linkUrl, '_self')
+    openLink(linkUrl) {
+      window.location = linkUrl
     },
   },
 }
